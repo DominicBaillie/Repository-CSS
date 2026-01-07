@@ -1,2 +1,105 @@
 @charset "UTF-8";
+/* Named Slector 
+-------------------------------------------------------------    */
 
+h2
+{
+    color: blue;
+    font-style: italic;
+}
+
+/* ID Selector
+-------------------------------------------------------------    */
+
+#project p
+{
+    color: rgb(22, 95, 95);
+
+}
+
+/* Class Selector
+-------------------------------------------------------------    */
+
+.project
+{
+    color: magenta
+}
+.about
+{
+    color: darkblue;    
+    background-color: lightgray;
+}
+
+/* Contextual Selector
+-------------------------------------------------------------    */
+
+section p
+{
+    color: darkred;
+}
+.project p
+{
+    font-size: 20px;
+}
+
+/* Group Selector
+-------------------------------------------------------------    */
+
+h1, h2, h3
+{
+    font-family: Fantasy;
+    letter-spacing: 120%;
+}
+/* Psuedoclass Selector
+-------------------------------------------------------------    */
+
+a:link
+{
+    color: green;
+}
+a:visited
+{
+    text-decoration: none;
+    color: purple;
+}
+a:hover, a:focus
+{
+    color: orange;
+    border: 1px solid orange;
+}
+a:active
+{
+    color: red;
+    background-color: brightyellow;
+    border: 1px solid red;
+}
+
+/*Structural Pseudoclass Selector
+-------------------------------------------------------------    */
+
+li:nth-child(3n)
+{
+    background-color: lightblue;
+}
+li:nth-child(3n-1)
+{
+    background-color: lightseagreen
+}
+li:nth-of-type(even)
+{
+    font-weight: bold;
+}
+article section:last-of-type
+{
+    background-color: lightpink;
+}
+
+/* Pseudo-element Selector
+-------------------------------------------------------------    */
+
+h1 + p::first-line
+{
+    font-size: 110%;
+    font-weight:110;
+    text-transform: uppercase;
+}
