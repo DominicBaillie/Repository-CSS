@@ -2,7 +2,7 @@
 html {
 	box-sizing: border-box;
 }
-	*, *:before, *:after {
+	*, *::before, *::after {
 	box-sizing: inherit;
 }
 html {
@@ -22,7 +22,7 @@ header {
 	/* STEP 1b: Select a HUE using the Hue Slider */
 	/* STEP 1c: De-Saturate the colour a bit, reduce the Lightness, and make the colour slightly transparent by adjusting the Alpha. */
 	/* STEP 1d: Copy the resulting RGBa value and replace the background-color below */
-	background-color: black;
+	background-color: #6eb3e4;
 	padding: 1% 10%;
 }
 header h1 {
@@ -40,7 +40,7 @@ main h2 {
 
 	font-size: 500%;
 	margin: 0;	
-	color: white;
+	color: lab(55.74% 81.48 -30.94 / 0.737);
 }
 main p {
 	margin-top: 0;
