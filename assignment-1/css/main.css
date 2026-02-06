@@ -6,14 +6,17 @@
 }
 html
 {
+	/* Set defualts; Text font, sizing, shawdow to make more readable  */
 	font-family: 'Tangerine', cursive;
 	font-size: 2.5rem;
 	line-height: 1.8;
 	font-weight: bold;
 	letter-spacing: .1rem;
 	text-shadow: 1px 1px 2px black;
+	/* Center the items on page */
 	justify-content: center;
 	justify-items: center;
+	/* Set background to a similar them to the song */
 	background: white url(../photos/background.png);
 	background-size: cover;
 	/* recieved from freepik.com, https://www.freepik.com/free-photo/beautiful-tropical-philodendron-leaves_5154584.htm#fromView=keyword&page=1&position=4&uuid=a41bbf8f-9ed2-436b-a929-d5eacb3dcb90&query=Jungle 
@@ -27,13 +30,17 @@ body
 	padding: 1rem;
 }
 
-#content {
+#content 
+{
+	/* Background color in theme to image, to make text stand out more */
 	background-color: rgba(240, 200, 148, 0.872);
 	width: 80vw;
+	/* Keeps general shape of the page, and prevents text from being squished off campas */
 	max-width: 1750px;
 	min-width: 900px;
 	margin: 0 auto;
 	display: grid;
+	/* Simple grid to hold all items */
 	grid-template-areas:
 		"header"
 		"main"
@@ -44,9 +51,11 @@ body
 header { grid-area: header; }
 main   
 { 
+	/* The lesser width makes it fit inside of the content, rather than to the edge */
 	width: 95%;
 	grid-area: main;
 	background: rgba(98, 89, 71, 0.911);
+	/* Collumns for better format the content */
 	columns: 3;
 	column-gap: 1.2rem;
 	border: 1px solid black;
@@ -58,18 +67,22 @@ main
 }
 footer { grid-area: footer; }
 
-section, article, p, h1, h2, h3, h4, h5, h6{
+section, article, p, h1, h2, h3, h4, h5, h6
+{
+	/* Centers the text, and I don't know thought the border was kind of interesting */
 	justify-content: center;
 	text-align: center;
 	border: 3px solid rgba(0, 0, 0, 0.075);
 }
 h1, h2, h3, h4, h5, h6
 {
+	/* I bolder font to make headers pop more, the shadow for this would be excessive */
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	text-shadow: 0;
 }
 a 
 {
+	/* Just a simple anchor design, centered and in theme */
 	justify-self: center;
 	text-align: center;
 	text-decoration: none;
@@ -77,6 +90,7 @@ a
 }
 blockquote
 {
+	/* Direct qoute to lyrics, made to stand out more */
 	font-style: italic;
 	font-size: 1.05rem;
 }
