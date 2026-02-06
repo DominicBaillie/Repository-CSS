@@ -6,14 +6,19 @@
 }
 html
 {
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: 'Tangerine', cursive;
 	font-size: 2.5rem;
 	line-height: 1.8;
 	font-weight: bold;
+	letter-spacing: .1rem;
+	text-shadow: 1px 1px 2px black;
 	justify-content: center;
 	justify-items: center;
-
-	background: rgb(255, 255, 255);
+	background: white url(../photos/background.png);
+	background-size: cover;
+	/* recieved from freepik.com, https://www.freepik.com/free-photo/beautiful-tropical-philodendron-leaves_5154584.htm#fromView=keyword&page=1&position=4&uuid=a41bbf8f-9ed2-436b-a929-d5eacb3dcb90&query=Jungle 
+		Close enough to the real image for the song
+	*/
 	box-sizing: border-box;
 }
 body
@@ -23,9 +28,10 @@ body
 }
 
 #content {
-	background-color: antiquewhite;
+	background-color: rgba(240, 200, 148, 0.872);
 	width: 80vw;
 	max-width: 1750px;
+	min-width: 900px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-areas:
@@ -36,12 +42,16 @@ body
 }
 
 header { grid-area: header; }
-main   { 
+main   
+{ 
+	width: 95%;
 	grid-area: main;
-	background: darkgray;
+	background: rgba(98, 89, 71, 0.911);
 	columns: 3;
 	column-gap: 1.2rem;
-	width: 90%;
+	border: 1px solid black;
+	padding: 1%;
+
 	display: inline-block;
 	justify-self: center;
 
@@ -51,11 +61,22 @@ footer { grid-area: footer; }
 section, article, p, h1, h2, h3, h4, h5, h6{
 	justify-content: center;
 	text-align: center;
+	border: 3px solid rgba(0, 0, 0, 0.075);
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-shadow: 0;
 }
 a 
 {
 	justify-self: center;
 	text-align: center;
 	text-decoration: none;
-	color: darkblue;
+	color: rgb(198, 109, 46);
+}
+blockquote
+{
+	font-style: italic;
+	font-size: 1.05rem;
 }
