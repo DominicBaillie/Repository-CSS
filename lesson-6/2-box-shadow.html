@@ -23,35 +23,48 @@
 		}
 		/* STEP 1: Simple box shadow - x-offset y-offset blur-radius color */
 		.shadow {
-			
+			box-shadow: 4px 3px 5px grey;
 		}
 		/* STEP 2: Box shadow with negative offsets and blur */
 		.shadow-negative {
-			
+			box-shadow: -4px -3px 5px rgb(206, 49, 49);
 		}
 		/* STEP 3: Box shadow with offsets, blur, and shadow-spread value as well */
 		.shadow-spread {
-			
+			box-shadow: 4px 3px 55px 10px grey;
 		}
 		/* STEP 4: Box shadow with no offsets, blur and shadow-spread */
 		.shadow-offsets-0 {
-			
+			box-shadow: 0 0 10px 5px grey;
 		}
 		/* STEP 5: Inset box shadow with keyword 'inset' at the end of the values */
 		.inset-shadow {
-			
+			box-shadow: inset -4px -3px 3px grey;
 		}
 		/* STEP 6: Create multiple box shadows with comma-separated lists of values */
 		.multiple {
+			box-shadow: inset
+				-4px -3px 3px grey,
+				4px 3px 5px rgba(128, 128, 128, 0.404)
+				;
 			
 		}
 		/* STEP 7a: Create a box shadow with a negative spread */
 		.shadow-negative-spread {
-			
+			border-radius: 1rem;
+			box-shadow: 0px 9px 6px -10px grey;
+			transition: all 0.5s ease;
+			position: relative;
+			top: 0;
+			right: 0;
+			transform: scale(1.);
 		}
 		/* STEP 7b: Add a :hover pseudo-class to simulate box dropping closer toward page surface - add a transition above to STEP 7a, too */
 		.shadow-negative-spread:hover {
-			
+			box-shadow: 0px 6px 6px 0px grey;
+			top: 2px;
+			right: -2px;
+			transform: scale(1.05);
 		}
 		/* Learn more about box-shadow at https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 	</style>
