@@ -1,72 +1,106 @@
-body 
-{
-	line-height: 1.4;
-	font-family: 'Times New Roman', Times, serif;
-}
-p
-{
-	text-align: justify;
-}
-#page 
-{
-    width: 60%;
-	background-color: white;
-	margin: 50px auto;
-	padding: 5%;
+.crete-round-regular {
+  font-family: "Crete Round", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 
-{
-  font-family: 'Voltaire', 'Oswald', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-h2, h3, h4, h5, h6
-{
-	font-size: 1.1rem;
-    letter-spacing: 20%;
-}
-h2
-{
-	transform: scaleY(200%);
-	transform: scaleX(80%);
-	text-align: center;
-	font-size: 4rem;
-}
-h4
-{
-	font-size: 1.2rem;
-}
-header>p
-{
-	font-family: 'Voltaire', 'Oswald', sans-serif;
-	font-weight: bold;
-	font-size: 1.2rem;
-	letter-spacing: 20%;
-	text-transform: uppercase;
-}
-header h1
-{
-	margin: 0;
-	padding: 0;
-	letter-spacing: 30%;
-	font-size: 1.9rem;
-	font-weight: lighter;
-	border: 2px solid black;
-	display: inline-block;
-  	border: 2px solid black;
-  	padding: 2px
+.crete-round-regular-italic {
+  font-family: "Crete Round", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-
-/* Multi-column layout
+/* Default Page
 -------------------------------------------------- */
-main 
+html{
+  line-height:1.4rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+  max-width:1100px;
+  margin:auto;
+}
+header h1{
+  margin-top:20px;
+  color:rgb(255,123,0);
+  font-size:1rem;
+  font-weight:lighter;
+  display:inline-block;
+  border-left:2px solid black;
+  border-right:2px solid black;
+  padding:2px 6px;
+  letter-spacing:2px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+main p:last-of-type
 {
-  column-count: 3;
+  font-weight:bold;
+}
+article{
+  column-gap:2rem;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family:'Crete Round', serif;
+}
+h4{
+  font-size:1.2rem;
+}
+/* Grid 1
+-------------------------------------------------- */
+#container{
+  display:grid;
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+}
+main{
+  grid-area:body;
+}
+header{
+  grid-area:header;
+}
+footer{
+  margin:1rem 0;
+  grid-area:footer;
+}
 
-}
-main p:first-child 
+/* Inside Grid
+-------------------------------------------------- */
+article
 {
-  margin-top: 0;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:auto auto auto;
+    grid-template-areas:
+    "image image side"
+	"first first side"
+	"bottom bottom side";
+  gap:1rem;
 }
+main img{
+  width:100%;
+  grid-area: image;
+  grid-row:1;
+}
+main h2:first-of-type{
+  font-size:3rem;
+  line-height:3rem;
+  margin-top:.5rem;
+}
+article p:first-of-type, main h2:first-of-type{
+  grid-area: first;
+}
+article p:nth-of-type(2), main h2:nth-of-type(2){
+  grid-area: bottom;
+  columns: 2;
+}
+article h2:nth-of-type(n+3), article p:nth-of-type(n+3)
+{
+  grid-area: side;
+  text-align: justify;
+  align-items: first baseline;}
+
+
+
