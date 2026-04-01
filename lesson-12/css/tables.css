@@ -3,29 +3,46 @@
 html {
     font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
     background-color: black;
-    color: white;
+    color: cyan;
+    margin-left : 1.5em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /* STEP 7: Collapse borders */
 table {
     border-collapse: collapse;
 
 /* STEP 9a: Adjust placement of table caption */
-
+    caption-side: top;
 /* STEP 9b: Try different values for table-layout (https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) in conjunction with the width property. */
-
+    table-layout: auto;
+    width: 100%;
+    max-width: 550px;
 }
 /* STEP 10b: Zebra striping for columns */
-col:nth-child(2) {
-
+/* col:nth-child(2) {
+    background: rgb(122, 84, 107);
+} */
+colgroup+colgroup col:nth-child(1) {
+    background: rgb(122, 84, 107);
+}
+colgroup+colgroup col:nth-child(2) {
+    background: rgb(154, 104, 134);
+}
+colgroup+colgroup col:nth-child(3) {
+    background: rgb(174, 117, 152);
 }
 
+
+tbody tr:nth-child(odd) {
+    background: rgb(157, 106, 137);
+}
 /* STEP 8: Adjust padding for usability with TH and TD */
 td, th {
     border: 1px solid pink;
     padding: 0.5em;
 }
 th {
-    background: rgb(211, 154, 188);
+    background: rgb(18, 18, 62);
 }
 /* STEP 6: Align table headings in the table body */
 tbody th {
