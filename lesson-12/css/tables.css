@@ -2,9 +2,12 @@
 
 html {
     font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
 }
 /* STEP 7: Collapse borders */
 table {
+    border-collapse: collapse;
 
 /* STEP 9a: Adjust placement of table caption */
 
@@ -18,14 +21,15 @@ col:nth-child(2) {
 
 /* STEP 8: Adjust padding for usability with TH and TD */
 td, th {
-
+    border: 1px solid pink;
+    padding: 0.5em;
 }
 th {
-    background: rgba(225,225,225,1);
+    background: rgb(211, 154, 188);
 }
 /* STEP 6: Align table headings in the table body */
 tbody th {
-
+    text-align: right;
 }
 thead tr:first-child th:first-child {
     /* Hide top left cell - it's empty */
