@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html
+{
+	/* Set defualts; Text font, sizing, shawdow to make more readable  */
+	font-family: 'Tangerine', cursive;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	font-weight: bold;
+	letter-spacing: .1rem;
+	text-shadow: 1px 1px 2px black;
+	/* Center the items on page */
+	justify-content: center;
+	justify-items: center;
+	background: rgb(230, 228, 223);
+	background-size: cover;
+	box-sizing: border-box;
+}
+body
+{
+	justify-self: center;
+	padding: 3rem;
+}
+
+#content 
+{
+	/* Background color in theme to image, to make text stand out more */
+	background-color: rgba(102, 166, 196, 0.872);
+	width: 80vw;
+	/* Keeps general shape of the page, and prevents text from being squished off campas */
+	max-width: 1750px;
+	min-width: 900px;
+	margin: 0 auto;
+}
+
+header 
+{  
+    border: 3px solid rgba(0, 0, 0, 0.288);
+    background-color: rgba(197, 243, 245, 0.301);
+}
+main   
+{ 
+	width: 95%;
+	grid-area: main;
+	background: rgba(194, 224, 236, 0.486);
+	border: 1px solid rgba(0, 0, 0, 0.288);
+	padding: 1%;
+
+	display: inline-block;
+	justify-self: center;
+
+}
+footer 
+{ 
+    font-size: .8rem;
+    background-color: rgba(151, 167, 168, 0.356);
+
+}
+
+section, article, p, h1, h2, h3, h4, h5, h6
+{
+	/* Centers the text, and I don't know thought the border was kind of interesting */
+	justify-content: center;
+	text-align: center;
+	border-left: 3px solid rgba(0, 0, 0, 0.027);
+    border-right: 3px solid rgba(0, 0, 0, 0.027);
+}
+h1, h2, h3, h4, h5, h6
+{
+	/* I bolder font to make headers pop more, the shadow for this would be excessive */
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-shadow: 0;
+    background-color: rgba(165, 187, 192, 0.568);
+    margin-top: 2rem;
+    border-top: 5px solid rgba(106, 137, 165, 0.418);
+}
+.link-github svg
+{
+    height : 4.5rem;
+    width: auto;
+    text-align: center;
+    align-items: center;
+}
+.link-github
+{
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+a 
+{
+	/* Just a simple anchor design, centered and in theme */
+	justify-self: center;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(46, 198, 190);
+}
+blockquote
+{
+	/* Direct qoute to lyrics, made to stand out more */
+	font-style: italic;
+	font-size: 1.05rem;
+}
