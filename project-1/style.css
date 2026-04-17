@@ -16,7 +16,7 @@ html
 	/* Center the items on page */
 	justify-content: center;
 	justify-items: center;
-	background: rgb(230, 228, 223);
+	background: linear-gradient(135deg, #e6e6e6 0%, #9c8299 100%);
 	background-size: cover;
 	box-sizing: border-box;
 }
@@ -87,10 +87,16 @@ h1, h2, h3, h4, h5, h6
 }
 .link-github svg
 {
-    height : 4.5rem;
+    height : 2.5rem;
     width: auto;
     text-align: center;
     align-items: center;
+}
+.link-github:hover svg
+{
+	height : 3.5rem;
+	fill: rgb(37, 10, 36);
+	text-shadow: 2px 2px 5px rgb(49, 46, 60);
 }
 .link-github
 {
