@@ -54,6 +54,13 @@ main
 	justify-self: center;
 
 }
+main ::first-line
+{
+	/* Make first stand out */
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	color: rgb(9, 9, 19);
+}
 footer 
 { 
     font-size: .8rem;
@@ -106,17 +113,30 @@ blockquote
 	font-size: 1.05rem;
 }
 
+main ul
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+li
+{
+	
+	list-style: none;
+	font-size: 1.1rem;
+	border: 3px solid rgba(127, 20, 208, 0.288);
+	margin: 1rem;
+	padding: 1rem;
+}
+p:nth-of-type(odd)
+{
+	color:rgb(34, 15, 52);
+	background-color: rgba(153, 181, 205, 0.318);
+}
 
-
-
-
-
-
-
-
-
-
-
-/* 
-	It is quite literally 28 degrees celcius in my dorm right now, and I have to move to a home without wifi. Hope I get enough done in time... I literally can't even think right now though
-*/
+li, p:has(+ul)
+{
+	
+	color:rgb(34, 15, 52);
+	background-color: rgba(230, 236, 194, 0.486);
+}
