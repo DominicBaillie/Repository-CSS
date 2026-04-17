@@ -140,3 +140,8 @@ li, p:has(+ul)
 	color:rgb(34, 15, 52);
 	background-color: rgba(230, 236, 194, 0.486);
 }
+a:hover
+{
+	color: rgb(255, 0, 247);
+	text-shadow: 2px 2px 5px rgb(49, 46, 60);
+}
